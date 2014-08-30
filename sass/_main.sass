@@ -123,6 +123,7 @@ header
       color: #3c6e00
       font-size: 24px
   .header_main_main
+    +clr
     .header_main_main_in
       @extend %in
       position: relative
@@ -206,29 +207,54 @@ header
     .header_right
       position: relative
       float: right
-
+      margin-top: 240px
+      .success
+        +box
+        padding-top: 40px
+        padding-left: 20px
+        padding-right: 20px
+        font-size: 24px
+        line-height: 1.1em
+        font-family: 'Conv_pfdintextcondpro-light'
+        width: 180px
+        height: 180px
+        +background(linear-gradient(to left, rgba(#599509,.8) 0%, rgba(#3b6d00,.8) 100%))
+        position: absolute
+        top: -360px
+        right: 0
+        text-align: center
+        color: #ffffff
+        +border-radius(50%)
+        +background-clip(padding-box)
+        z-index: 1
     .header_list
       position: relative
       z-index: 1
       ul
         li
-          @include border-radius(8px)
-          @include background-clip(padding-box)
+          position: relative
+          +border-radius(8px)
+          +background-clip(padding-box)
           background-color: #3b6d00
-          @include background-image(linear-gradient(left, #3b6d00 0%, #599509 100%))
-          @include opacity(.8)
+          +background(linear-gradient(to left, rgba(#599509, .8) 0%, rgba(#3b6d00, .8) 100%))
           margin-bottom: 10px
           width: 340px
           height: 60px
           color: white
-          span
+          +box
+          padding: 8px 40px 0 70px
+
           &:before
             position: absolute
             +s(list_icon)
-            left: 0
+            left: 20px
+            top: 14px
             content: ""
 
-
+.when
+  margin-top: -120px
+  h2
+    color: #ff3c28
 
 
 

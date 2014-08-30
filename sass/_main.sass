@@ -55,7 +55,8 @@ input, textarea
 header
   background: url(../img/header_bg.jpg) center no-repeat
   +background-size(cover)
-  height: 900px
+  height: 1145px
+  +box
   .header_in
     @extend %in
     +clr
@@ -78,7 +79,7 @@ header
         color: #5a5a5a
         line-height: 1em
         &:last-child
-        border: none
+          border: none
         a
           color: inherit
           padding-right: 20px
@@ -110,6 +111,7 @@ header
       font-size: 18px
       color: #e65a32
       text-transform: uppercase
+      margin-right: 20px
       span
         font-family: 'conv_pfdintextcondpro-medium'
   .header_main_top
@@ -121,12 +123,112 @@ header
       color: #3c6e00
       font-size: 24px
   .header_main_main
+    .header_main_main_in
+      @extend %in
+      position: relative
+    .feet
+      position: absolute
+      background: url(../img/feet.png) no-repeat
+      content: ""
+      width: 630px
+      height: 600px
+      left: 260px
+      top: 63px
+
     .header_left
+      position: relative
       width: 360px
       float: left
+      margin-top: 70px
+
       .header_p
         font-size: 18px
         color: #3c6e00
+        padding-left: 20px
+      .price
+        position: absolute
+        top: 42px
+        right: -95px
+        +box
+        width: 140px
+        height: 140px
+        +border-radius(50%)
+        +background-clip(padding-box)
+        background: #ff3b27
+        +background(linear-gradient(to top, #cd276d 0%, #ff3b27 100%))
+        font-family: 'conv_pfagoraslabpro-ublackit'
+        font-size: 48px
+        color: #ffffff
+        line-height: 0.5em
+        text-align: center
+        padding-top: 45px
+        z-index: 1
+
+        span
+          font-size: 16px
+          font-family: 'conv_pfdintextcondpro-light'
+      .same_price
+        @include border-radius(50%)
+        width: 120px
+        height: 120px
+        position: absolute
+        line-height: 1
+        text-align: center
+        +box
+        color: white
+        top: 4px
+        right: -184px
+        font-family: 'conv_pfdintextcondpro-light'
+        font-size: 18px
+        padding-top: 30px
+        padding-left: 20px
+        padding-right: 20px
+        +background-clip(padding-box)
+        +background-image(linear-gradient(to top, #639100 0%, #bde500 100%))
+        +single-text-shadow
+      .discount
+        background: url(../img/discount.png) no-repeat
+        width: 190px
+        height: 80px
+        position: absolute
+        line-height: 1
+        color: white
+        top: 193px
+        right: -190px
+        font-family: 'conv_pfdintextcondpro-light'
+        font-size: 18px
+        padding-top: 22px
+        padding-left: 20px
+        +box
+        +single-text-shadow
+        z-index: 1
+
+    .header_right
+      position: relative
+      float: right
+
+    .header_list
+      position: relative
+      z-index: 1
+      ul
+        li
+          @include border-radius(8px)
+          @include background-clip(padding-box)
+          background-color: #3b6d00
+          @include background-image(linear-gradient(left, #3b6d00 0%, #599509 100%))
+          @include opacity(.8)
+          margin-bottom: 10px
+          width: 340px
+          height: 60px
+          color: white
+          span
+          &:before
+            position: absolute
+            +s(list_icon)
+            left: 0
+            content: ""
+
+
 
 
 

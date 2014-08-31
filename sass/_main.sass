@@ -252,11 +252,145 @@ header
             content: ""
 
 .when
+  .when_in
+    @extend %in
+    margin-top: 20px
   margin-top: -120px
   h2
     color: #ff3c28
+  .when_item
+    width: 280px
+    display: inline-block
+    margin-right: 75px
+    &:last-of-type
+      margin-right: 0
+    span
+      position: relative
+      display: block
+      text-align: left
+      +border-radius(8px)
+      +background-clip(padding-box)
+      border: solid 2px #e5f5b3
+      width: 280px
+      height: 60px
+      +box
+      font-size: 18px
+      color: #3c6e00
+      padding-top: 8px
+      line-height: 1em
+      padding-left: 70px
+      padding-right: 10px
+      &.attention
+        color: #d23232
+        border: solid 2px #ffdbdb
+
+      i
+        position: absolute
+        +s(list_icon_green)
+        top: 13px
+        left: 20px
+        &.bang
+          +s(item_bang)
 
 
+
+
+    .when_img
+      margin-top: 20px
+      img
+        width: 280px
+        height: 280px
+        +border-radius(50%)
+
+  p
+    text-align: center
+    font-size: 18px
+    color: #5a5a5a
+    line-height: 1em
+    margin-top: 35px
+    &:last-child
+      margin-top: 0
+
+.action
+  background: url(../img/action_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 1383px
+  margin-top: -110px
+  h2
+    text-align: center
+    font-size: 48px
+    color: #ffffff
+    padding-top: 220px
+    font-weight: normal
+    line-height: 1em
+    span
+      font-family: "conv_pfdintextcondpro-medium"
+  .action_in
+    @extend %in
+    width: 1010px
+  .tool
+    position: relative
+    color: #ffffff
+    +box
+    font-size: 24px
+    padding-top: 15px
+    text-align: center
+    width: 280px
+    height: 70px
+    display: block
+    background: url(../img/action_tooltip.png)
+
+  .action_item
+    +clr
+    .action_item_left
+      float: left
+      width: 280px
+      +clr
+    .action_img
+      position: relative
+      margin-top: 20px
+      &:after
+        position: absolute
+        +s(action_arrow)
+        top: 36px
+        right: -50px
+        content: ""
+      img
+        width: 280px
+        height: 100px
+        +border-radius(8px)
+      span
+        color: #ffffff
+        font-size: 36px
+        +box
+        padding-left: 19px
+        padding-top: 5px
+        top: -10px
+        left: 10px
+        width: 60px
+        height: 60px
+        font-family: 'conv_pfagoraslabpro-bold'
+        position: absolute
+        @include border-radius(30px)
+        +background-clip(padding-box)
+        +background-image(linear-gradient(to bottom, #ff3b27 0%, #cd276d 100%))
+    p
+      font-size: 18px
+      color: #ffffff
+      text-align: left
+      margin-left: 10px
+      padding-right: 30px
+      line-height: .9em
+      margin-bottom: 35px
+    .action_item_right
+      +clr
+      float: right
+      width: 280px
+      .item_img
+        text-align: center
+      h3
+        font-size: 24px
+        color: #ffffff
 
 
 footer

@@ -3,124 +3,58 @@ head.ready(function() {
 	// $(document).on("click", function(){
 	// 	$(".js-popup").hide();
 	// });
-    jQuery(document).ready(function($) {
-        var nav = $('.menu');
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 95) {
-                nav.addClass("f-nav");
-
-            } else {
-                nav.removeClass("f-nav");
-            }
-        });
+    $(window).scroll(function () {
+        if ( $(this).scrollTop() > 200 && !$('.scrollMenu').hasClass('open') ) {
+            $('.scrollMenu').addClass('open');
+            $('.scrollMenu').slideDown();
+        } else if ( $(this).scrollTop() <= 200 ) {
+            $('.scrollMenu').removeClass('open');
+            $('.scrollMenu').slideUp();
+        }
     });
+//    jQuery(document).ready(function($) {
+//        var nav = $('.menu');
+//
+//        $(window).scroll(function () {
+//            if ($(this).scrollTop() > 95) {
+//                nav.addClass("f-nav");
+//
+//            } else {
+//                nav.removeClass("f-nav");
+//            }
+//        });
+//    });
     //$('.parallax').css('background-position', 'center ' + (($('.parallax').offset().top - $(window).scrollTop()) * 0.1) + 'px');
     $(window).stellar({
         horizontalScrolling: false
-        ,
+       ,
         verticalOffset: 40
 
     });
 
-    $('#form1').validate();
-    $('#form2').validate();
-    $('#form3').validate();
-    $('#form4').validate();
-    $('#form5').validate();
-    $('#form6').validate();
-    $('#form7').validate();
-
-    $("#form1").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form2").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-
-    $("#form3").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form4").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form5").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form6").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
-    $("#form7").ajaxForm({
-        success: function () {
-            $(".thanks-link").trigger('click');
-        },
-        data: {
-            title: 'Спасибо!'
-        }
-    });
+    $('#frm-first form').validate();
+    $('#frm-second form').validate();
 
 
-    $('.fancybox').fancybox({
-        padding: 0,
-        helpers: {
-            overlay: {
-                locked: false
-            }
-        },
-        tpl: {
-            closeBtn: '<div class="myFancyClose"></div>'
-        },
-        beforeShow: function(){
-            $(".fancybox-skin").css("backgroundColor","transparent");
-            $(".fancybox-skin").css("boxShadow","none");
-        }
-    });
+
+//
+//    $('.fancybox').fancybox({
+//        padding: 0,
+//        helpers: {
+//            overlay: {
+//                locked: false
+//            }
+//        },
+//        tpl: {
+//            closeBtn: '<div class="myFancyClose"></div>'
+//        },
+//        beforeShow: function(){
+//            $(".fancybox-skin").css("backgroundColor","transparent");
+//            $(".fancybox-skin").css("boxShadow","none");
+//        }
+//    });
 //////////////////////without close button
-    $('.fancybox_wcb').fancybox({
-        padding: 0,
-        helpers: {
-            overlay: {
-                locked: false
-            }
-        },
-        tpl: {
-            closeBtn: 'false'
-        },
-        beforeShow: function(){
-            $(".fancybox-skin").css("backgroundColor","transparent");
-            $(".fancybox-skin").css("boxShadow","none");
-        }
-    });
+
 //////////////////////////////////////////////////
 //more reviews show, when clicked
 //    $(".moreReviews").click(function(){
@@ -171,14 +105,14 @@ head.ready(function() {
             var id = $(this).attr('id');
             var top = ($('.page').offset().top - 80);
             if( $(window).scrollTop() >= (pos - 79)){
-                $('.js-nav li').removeClass('is-active');
-                //$('.js-nav li a').removeClass('is-active');
-                $('[href = #'+id+']').parent().addClass('is-active');
-                //$('[href = #'+id+']').addClass('is-active');
+                //$('.js-nav li').removeClass('is-active');
+                $('.js-nav li a').removeClass('is-active');
+                //$('[href = #'+id+']').parent().addClass('is-active');
+                $('[href = #'+id+']').addClass('is-active');
             }
             if($(window).scrollTop() < top){
-                $('.js-nav li').removeClass('is-active');
-                //$('.js-nav li a').removeClass('is-active');
+                //$('.js-nav li').removeClass('is-active');
+                $('.js-nav li a').removeClass('is-active');
 
             }
         });

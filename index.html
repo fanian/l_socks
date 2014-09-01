@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Template</title>
+    <title>SOSU</title>
     <meta name="viewport" content="initial-scale=1"/>
     <link rel="stylesheet" href="css/fonts.css"/>
     <link rel="stylesheet" href="css/jquery.fancybox.css"/>
@@ -18,7 +18,7 @@
     <div class="top">
         <div class="header_in">
             <nav>
-                <ul>
+                <ul class="js-nav">
                     <li><a href="#first">О магазине</a></li>
                     <li><a href="#delivery">Доставка</a></li>
                     <li><a href="#faq">Вопросы и ответы</a></li>
@@ -40,9 +40,10 @@
     <div class="header_main_top">
 
         <div class="header_in">
-            <h1 class="title">Педикюрные носочки <span>SOSU</span></h1>
+            <span id="first" class="section"></span><h1 class="title">Педикюрные носочки <span>SOSU</span></h1>
 
             <h2>здоровье и уход за ножками в условиях домашнего уюта</h2>
+            <div class="parallax par1" data-stellar-ratio="1.8"><img src="img/par1.png" alt="parallax"/></div>
         </div>
     </div>
     <div class="header_main_main">
@@ -101,6 +102,7 @@
                 <div class="price">979<br/><span>рублей</span></div>
                 <div class="same_price">Две пары по цене одной</div>
                 <div class="discount">На 40% дешевле салонного пилинга</div>
+              <div class="parallax par2" data-stellar-ratio="1.8"><img src="img/par2.png" alt="parallax"/></div>
 
             </div>
             <div class="header_right">
@@ -118,11 +120,26 @@
 
             </div>
             <div class="feet"></div>
+            <div class="parallax par3" data-stellar-ratio="1.2"><img src="img/par3.png" alt="parallax"/></div>
+
         </div>
     </div>
 
 </header>
-
+<div class="scrollMenu">
+    <div class="header_in">
+        <div class="top">
+        <nav>
+            <ul class="js-nav">
+                <li><a href="#first">О магазине</a></li>
+                <li><a href="#delivery">Доставка</a></li>
+                <li><a href="#faq">Вопросы и ответы</a></li>
+                <li><a href="#best">Преимущества</a></li>
+            </ul>
+        </nav>
+    </div>
+    </div>
+</div>
 <div class="page">
 
 <div class="when">
@@ -147,10 +164,11 @@
         <p>Согласно результатам клинических исследований, носки эффективены</p>
 
         <p>как при начальной, так и при выраженном огрубении поверхности стопы!</p>
+        <div class="parallax par4" data-stellar-ratio="2"><img src="img/par4.png" alt="parallax"/></div>
 
     </div>
 </div>
-<div class="action">
+<span id="faq" class="section"></span><div class="action">
     <h2>Какое воздействие оказывают<br/><span>педикюрные носочки SOSU</span> на ваши ножки</h2>
 
     <div class="action_in">
@@ -259,12 +277,12 @@
                     <h4>посмотрите видео<br/> с первого канала</h4>
                     <i></i>
 
-                    <div class="video"><img class="img_video" src="img/video.jpg" alt="video"/>
+                    <a href="#"><div class="video"><img class="img_video" src="img/video.jpg" alt="video"/>
 
                         <div class="play">
                             <img src="img/play.png" alt="play"/>
                         </div>
-                    </div>
+                    </div></a>
                     <div class="shadow"><img src="img/shadow.png" alt="shadow"/></div>
 
                 </div>
@@ -282,12 +300,14 @@
                 </div>
             </div>
         </div>
+        <div class="leaves"><img src="img/leaves.png" alt="leaves"/></div>
+        <div class="parallax par5" data-stellar-ratio="2.2"><img src="img/par5.png" alt="parallax"/></div>
 
 
     </div>
 </div>
 
-<div class="benefits">
+<span id="best" class="section"></span><div class="benefits">
     <h2 class="title">Главные преимущества<br/><span>педикюрных носочков <span>sosu</span></span></h2>
 
     <div class="benefits_in">
@@ -337,7 +357,7 @@
             <div class="benefits_img_right">
                 <img src="img/ben_img3.jpg" alt="item"/>
             </div>
-            <div class="benefits_oranges"><img src="img/oranges.png" alt="oranges"/></div>
+            <div class="benefits_oranges" data-stellar-ratio="2.4"><img src="img/oranges.png" alt="oranges"/></div>
         </div>
 
     </div>
@@ -357,16 +377,164 @@
        <h3>Состав носочков для педикюра SOSU</h3>
         <ul>
             <li><div class="compos_img"><img src="img/compos_img1.jpg" alt="composition"/></div><span>лимон</span></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+            <li><div class="compos_img"><img src="img/compos_img2.jpg" alt="composition"/></div><span>ромашка</span></li>
+            <li><div class="compos_img"><img src="img/compos_img3.jpg" alt="composition"/></div><span>таволга</span></li>
+            <li><div class="compos_img"><img src="img/compos_img4.jpg" alt="composition"/></div><span>апельсин</span></li>
+            <li><div class="compos_img"><img src="img/compos_img5.jpg" alt="composition"/></div><span>грейпфрут</span></li>
+            <li><div class="compos_img"><img src="img/compos_img6.jpg" alt="composition"/></div><span>календула</span></li>
+            <li><div class="compos_img"><img src="img/compos_img7.jpg" alt="composition"/></div><span>шалфей</span></li>
         </ul>
     </div>
 </div>
 
+<div class="reviews">
+    <h2 class="title">Отзывы наших покупателей</h2>
+    <div class="reviews_in">
+           <div class="review_item">
+               <div class="item">
+                   <div class="review_left">
+                       <div class="before"><img src="img/before.jpg" alt="before"/><span>до</span></div>
+                       <div class="before after"><img src="img/after.jpg" alt="after"/><span>после</span></div>
+                   </div>
+                   <div class="review_text">
+                       <h3>Татьяна Самойлова</h3>
+                       <p>Приветствую, я очень настоятельно рекомендую, всем,
+                           кто еще не испробовал на себе этот прекрасный метод.
+                           Это просто чудо ребята, безумно быстро, без боли, дешево,
+                           просто сказка, правда.
+                           Уже все мои подруги используют этот метод,
+                           в салон реально можно не идти. Эффект после буквально 3 дней!</p>
+                   </div>
+               </div>
+
+           </div>
+        <div class="review_item">
+            <div class="item">
+                <div class="review_left">
+                    <div class="before"><img src="img/before.jpg" alt="before"/><span>до</span></div>
+                    <div class="before after"><img src="img/after.jpg" alt="after"/><span>после</span></div>
+                </div>
+                <div class="review_text">
+                    <h3>Сергей Березкин</h3>
+                    <p>Приветствую, я очень настоятельно рекомендую, всем,
+                        кто еще не испробовал на себе этот прекрасный метод.
+                        Это просто чудо ребята, безумно быстро, без боли, дешево,
+                        просто сказка, правда.
+                        Уже все мои подруги используют этот метод,
+                        в салон реально можно не идти. Эффект после буквально 3 дней!</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<span id="delivery" class="section"></span><div class="our">
+    <h2 class="title"><span>Наши преимущества</span></h2>
+    <div class="our_in">
+        <div class="our_left">
+            <div class="our_delivery">Доставка по всей России</div>
+        </div>
+        <div class="our_right">
+            <div class="our_item">
+                <div class="our_img"><img src="img/list_ico1.png" alt=""/></div>
+                <p>Лучшие цены на рынке РФ и
+                    никаких предоплат</p>
+            </div>
+            <div class="our_item">
+                <div class="our_img"><img src="img/list_ico2.png" alt=""/></div>
+                <p>Круглосуточная поддержка для наших клиентов</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bottom">
+    <div class="header_main_main">
+        <div class="header_main_main_in">
+            <div class="header_left">
+
+                <div class="form">
+                    <div class="caption">
+                        <h3>успей купить</h3>
+                        <h4>осталось <span>26</span> носочков</h4>
+
+                    </div>
+                    <div class="frm" id="frm-second">
+                        <form action="#" method="post">
+                            <input type="text" name="name" class="name required" placeholder="Введите ваше имя">
+                            <input type="text" name="phone" class="phone required"
+                                   placeholder="Введите ваш номер телефона">
+                            <button class="button">заказать</button>
+
+                        </form>
+
+                    </div>
+                    <div class="counter">
+                        <p>до конца акции осталось</p>
+
+                        <ul class="count_line">
+
+                            <li>
+                                <span class="h"></span>
+
+                                <p>часов</p>
+                            </li>
+
+                            <li>
+                                <span class="m"></span>
+
+                                <p>минут</p>
+                            </li>
+
+                            <li>
+                                <span class="s"></span>
+
+                                <p>секунд</p>
+                            </li>
+
+                            <br class="cb">
+                        </ul>
+                    </div>
+
+
+                </div>
+
+                <div class="price">979<br/><span>рублей</span></div>
+                <div class="same_price">Две пары по цене одной</div>
+                <div class="discount">На 40% дешевле салонного пилинга</div>
+                <div class="parallax par9" data-stellar-ratio="2.8"><img src="img/par9.png" alt="parallax"/></div>
+
+            </div>
+            <div class="header_right">
+                <div class="header_list">
+                    <ul>
+                        <li>Нет риска заражения инфекцией в салоне</li>
+                        <li>Противоотечное и противовоспалительное действие</li>
+                        <li>Оказывает противогрибковый эффект на ваши ноги</li>
+                        <li>Устраняет трещины, потертости и мозоли</li>
+                        <li>Cтимулирует процесс отторжения мертвых тканей</li>
+                    </ul>
+                </div>
+
+
+            </div>
+            <div class="feet"></div>
+            <div class="parallax par7" data-stellar-ratio="2.6"><img src="img/par7.png" alt="parallax"/></div>
+            <div class="parallax par8" data-stellar-ratio="1.2"><img src="img/par8.png" alt="parallax"/></div>
+
+        </div>
+    </div>
+</div>
+<footer>
+<div class="footer_in">
+    <p>
+        <a href="#">Политика конфиденциальности</a> <a href="#">Партнерская программа</a></p>
+    <p>Срочную доставку осуществляет курьерская служба TNX Express.</p>
+    <p>Реквизиты: ООО «КУРЬЕР» ОГРН: 1137746208049 ИНН : 7725785302 КПП: 772501001 Юр. Адрес: 115280, г. Москва, Автозаводская ул., дом 17,
+    </p>
+</div>
+</footer>
 </div>
 </div>
 <!-- END out-->
